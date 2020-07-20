@@ -1,0 +1,24 @@
+
+<%- include("partials/header"); -%>
+
+
+<center><a href="/compose"><h1>Compose New Artical</h1></a>
+<p>click to create a blog</p></center>
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p>
+
+
+  <%  posts.forEach(function(publish){ %>
+
+    <h1><%=publish.title%></h1>
+    <p>
+    <%=publish.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=publish.title%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+
+		
+			
+<%- include("partials/footer"); -%>
